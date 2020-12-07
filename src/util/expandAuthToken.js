@@ -20,7 +20,7 @@ export function expandLocalAuthToken(token) {
   try {
     var tokenObj = jwt.verify(token, JWT_SECRET);
     tokenObj.active = true;
-    tokenObj.token_type - 'access_token';
+    tokenObj.token_type = 'access_token';
     return tokenObj;
   } catch (err) {
     Logger.Error(err);
