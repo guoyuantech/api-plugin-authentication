@@ -23,7 +23,7 @@ export function expandLocalAuthToken(token) {
     tokenObj.token_type = 'access_token';
     return tokenObj;
   } catch (err) {
-    Logger.Error(err);
+    Logger.error(err);
     throw err;
   }
 }
